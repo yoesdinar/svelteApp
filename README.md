@@ -1,5 +1,9 @@
 # Svelte Demo App
-ini adalah demo app menggunakan svelte. 
+Ini adalah demo app menggunakan svelte.
+Untuk melihat demo bagaimana aplikasi ini berjalan silakan buka link berikut: 
+https://svelte-app-gamma.vercel.app/
+
+Untuk menjalankan project di lokal:
 - clone repo ini 
 - npm i
 - npm run dev
@@ -64,11 +68,11 @@ in a nutshell
 # What experience did you get when developing with svelte?
 
 Banyak yang rekomen pakai svelte, karena mereka ngerasa lebih seperti ngoding HTML daripada ngoding suatu framework.
-kemudahan-kemudahan yang biasa kita dapatkan dari framework juga didapat disini. apalagi untuk reactivity, sangat intuitif.
-tidak perlu lagi pakai define-define set dan setstate seperti di react untuk mengupdate variable.
+Kemudahan-kemudahan yang biasa kita dapatkan dari framework juga didapat disini. Apalagi untuk reactivity, sangat intuitif.
+Tidak perlu lagi pakai define-define set dan setstate seperti di react untuk mengupdate variable.
 
 Tidak perlu juga setting-setting webpack karena bundle size dari Svelte App sudah kecil.
-fyi: bundlesize untuk project (bundle.js) ini adalah 21kb. cukup kecil dibanding yang lain.
+Fyi: bundlesize untuk project (bundle.js) ini adalah 21kb. Cukup kecil dibanding yang lain.
 
 # Beyond Svelte
 Beyond Svelte
@@ -83,7 +87,7 @@ Beyond Svelte
     
 # Projects that suitable using Svelte
 Seperti yang dijelaskan sebelumnya, tahun 2019 Svelte sudah masuk versi 3.
-dari sisi popularitas, Svelte sekarang sedang mulai menanjak. namun dibanding bahasa js yang lain, Svelte masih kurang dalam hal komunitas.
+Dari sisi popularitas, Svelte sekarang sedang mulai menanjak. Namun dibanding bahasa js yang lain, Svelte masih kurang dalam hal komunitas.
 
 Akan tetapi, untuk membuat sebuah aplikasi dengan tujuan utama performa, ringan, kode nya sedikit, dan tidak membutuhkan fitur-fitur library yang besar, Svelte.js patut untuk dilirik dan dicoba digunakan.
 
