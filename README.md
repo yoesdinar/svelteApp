@@ -1,3 +1,12 @@
+#todo
+===
+- add introductionary readme
+- why svelte?
+- what makes it so different with other
+- how it compared to other frameworks/library
+- what experience did you get when developing with svelte
+- projects that suitable using svelte
+
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
