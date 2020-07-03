@@ -1,100 +1,93 @@
-#todo
-===
-- add introductionary readme
-- why svelte?
-- what makes it so different with other
-- how it compared to other frameworks/library
-- what experience did you get when developing with svelte
-- projects that suitable using svelte
+# svelte demo app
 
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+ini adalah demo app menggunakan svelte. 
+- clone repo ini 
+- npm i
+- npm run dev
+- buka localhost:5000
 
----
+nodejs required ya.
 
-# svelte app
+# Pengenalan
+bagaimana jika saya katakan svelte bukanlah sebuah framework? ternyata dia sebuah compiler. 🤯 
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+mengutip dari website resmi svelte:
+_Svelte is a radical new approach to building user interfaces. Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app.
+Instead of using techniques like virtual DOM diffing, Svelte writes code that surgically updates the DOM when the state of your app changes._
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+# Why Svelte
+untuk mengenal svelte, dan juga background dari pengembangannya, sangat disarankan untuk melihat video dari pengembangnya Rich Harris.
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
+_Rich Harris - Rethinking Reactivity_
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
-
-Install the dependencies...
-
-```bash
-cd svelte-app
-npm install
-```
-
-...then start [Rollup](https://rollupjs.org):
-
-```bash
-npm run dev
-```
-
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
-
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
+https://www.youtube.com/watch?v=AdNJ3fydeao
+beberapa catatan di video tersebut:
+1. new framework is compiler
+2. we need to rethink on how reactive should be
+  1. on react, vue and other framework they use virtual DOM
+  2. virtual DOM is an overhead, it is slow.
+  3. is react slow? yes, how? the framework speak itself, they exposed shouldComponentUpdate, pure component etc.
+3. Svelte already goes to version 3, 
+  1. it already move reactivity out of the component API and into the language
+4. SSR? instead of create component tree and serializing it, svelte concanitate strings and it should work faster.
+  1. AWS bills will be lower
+5. react code for same app is 40% more than similar app in svelte
 
 
-## Building and running in production mode
+# Another Svelte Benefit
 
-To create an optimised version of the app:
+1. Accessibility
+2. Scoped Styles
+    1. jadi gausah pake classes lagi, soalnya udah scoped dalem komponen
+    2. bahkan child component ga bakal terpengaruh
+    3. dia bikin hash buat class nya.
+    4. ada CSS warning, kapan dia ga dipake atau dipake si kelas css nya
+3. transitions!
+    1. bagus buat notif dll
+    2. cuman tambah transition:fly{{y:250}} direction
+    3. ada juga fade.
+    4. spin function, css method
+    5. ada parameter in and out
+4. Complex Transitions
+    1. move gracefully 
+    2. transition using CSS -> not main thread jadi performa nya tinggi
+5. Svelte is compiler
+    1. not framework, ga bakal dateng file size gede si js nya.
 
-```bash
-npm run build
-```
+# Svelte comparison with other
+in a nutshell
 
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
+![alt text](https://miro.medium.com/max/552/1*xxUbJTpBQmRPssfBZAjiqg.png)
+
+![alt text](https://miro.medium.com/max/552/1*i8BONotbEvETZ4l_0rRigQ.png)
+
+Svelte Another benefit (according to its founder)
+
+# what experience did you get when developing with svelte
+
+banyak yang rekomen pakai svelte, karena mereka ngerasa lebih seperti ngoding HTML daripada ngoding suatu framework.
+kemudahan-kemudahan yang biasa kita dapatkan dari framework juga didapat disini. apalagi untuk reactivity, sangat intuitif.
+tidak perlu lagi pakai define-define set dan setstate seperti di react untuk mengupdate variable.
+
+tidak perlu juga setting-setting webpack karena bundle size dari Svelte App sudah kecil.
+fyi: bundlesize untuk project (bundle.js) ini adalah 21kb. cukup kecil dibanding yang lain.
+
+# beyond svelte
+Beyond Svelte
+1. Sapper!
+    1. Gatsby-style framework
+    2. less js
+    3. SSR and code splitting
+2. Svelte native
+    1. basedon nativescript-vue
+3. Svelte GL
+    1. like Three.js, but svelter
+    
+# projects that suitable using svelte
+seperti yang dijelaskan sebelumnya, tahun 2019 Svelte sudah masuk versi 3.
+dari sisi popularitas, svelte sekarang sedang mulai menanjak. namun dibanding bahasa js yang lain, svelte masih kurang dalam hal komunitas.
+
+akan tetapi, untuk membuat sebuah aplikasi dengan tujuan utama performa, ringan, kode nya sedikit, dan tidak membutuhkan fitur-fitur library yang besar, Svelte.js patut untuk dilirik dan dicoba digunakan.
 
 
-## Single-page app mode
-
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
-
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
-
-```js
-"start": "sirv public --single"
-```
-
-
-## Deploying to the web
-
-### With [Vercel](https://vercel.com)
-
-Install `vercel` if you haven't already:
-
-```bash
-npm install -g vercel
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-vercel deploy --name my-project
-```
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
-```
+cheers. 
