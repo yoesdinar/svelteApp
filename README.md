@@ -60,7 +60,6 @@ in a nutshell
 
 ![alt text](https://miro.medium.com/max/552/1*i8BONotbEvETZ4l_0rRigQ.png)
 
-Svelte Another benefit (according to its founder)
 
 # What experience did you get when developing with svelte?
 
